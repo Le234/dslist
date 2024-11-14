@@ -1,6 +1,7 @@
 package com.aleluiaeventos.dslist.dto;
 
 import com.aleluiaeventos.dslist.entities.Game;
+import com.aleluiaeventos.dslist.projection.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -20,6 +21,15 @@ public class GameMinDTO {
         imgUrl = Entity.getImgUrl();
         shortDescription = Entity.getShortDescription();
     }
+
+    public GameMinDTO(GameMinProjection projection) {
+        id = projection.getID();
+        title = projection.getTitle();
+        year = projection.getYear();
+        imgUrl = projection.getImUrl();
+        shortDescription = projection.getShortDescription();
+    }
+
 
     public Long getId() {
         return id;
