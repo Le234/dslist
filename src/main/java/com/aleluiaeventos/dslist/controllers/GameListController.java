@@ -23,7 +23,7 @@ public class GameListController {
     private GameListService gameListService;
 
     @Autowired
-    GameService gameService;
+    private GameService gameService;
 
     @GetMapping
     public List<GameListDTO> findAll(){
@@ -32,9 +32,9 @@ public class GameListController {
         
     }
 
-     @GetMapping(value = "/{listID}games")
-       public List<GameMinDTO> findByList(@PathVariable Long listID){
-        List<GameMinDTO> result = gameService.findByList(listID);
+     @GetMapping(value = "/{listId}/games")
+       public List<GameMinDTO> findByList(@PathVariable Long listId){
+        List<GameMinDTO> result = gameService.findByList(listId);
         return result;
         
     }

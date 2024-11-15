@@ -10,9 +10,9 @@ public class GameListDTO {
     public GameListDTO(){
 }
 
-    public GameListDTO(GameList entity) {
-        id = entity.getId();
-        name = entity.getNome();
+    public GameListDTO(GameList Entity) {
+       this.id = Entity.getId();
+       this.name = Entity.getNome();
     }
 
     public Long getId() {
